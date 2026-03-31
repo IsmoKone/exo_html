@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Congé</title>
+</head>
+<body>
+<center>
+
+</center>
+    <h2>Demande de Congé</h2>
+    <form>
+        <label for="dateDebut">Date de début :</label>
+        <input type="date" id="dateDebut" name="start-date" required><br><br>
+
+        <label for="dateFin">Date de fin :</label>
+        <input type="date" id="dateFin" name="end-date" required><br><br>
+
+        <label for="typeDeConge">Type de congé :</label>
+        <select name="typeDeConge" id="typeDeConge">
+            <option value="" selected disabled>----------Sélectionner un type de congé----------</option>
+            <option value="annual">Congé annuel</option>
+            <option value="congeMaladie">Congé maladie</option>
+            <option value="congePartiel">Congé partiel</option>
+            <option value="congeMaternite">Congé maternité</option>
+            <option value="congePaternite">Congé paternité</option>
+        </select>
+        <br><br>
+        <button type="submit"><a href="/gestionDeUtilisateurs/accueil.html">Soumettre la demande</a></button>
+    </form>
+
+    <h2>Demandes de Congé en Cours</h2>
+    <table border="1">
+        <tr>
+            <th>Date de début</th>
+            <th>Date de fin</th>
+            <th>Type de congé</th>
+            <th colspan="3">Status</th>
+            
+        </tr>
+        <tr>
+            <td>12-07-2026</td>
+            <td>12-08-2026</td>
+            <td>Congé annuel</td>
+            <td>En attente</td>
+            <td>accepté</td>
+            <td>refusé</td>
+        </tr>
+        <!-- Ajouter d'autres demandes de congé ici -->
+    </table>
+
+    <button><a href="/gestionDeUtilisateurs/accueil.html">Retour à l'accueil</a></button>
+</body>
+</html>
+
