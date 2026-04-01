@@ -85,7 +85,7 @@
 </head>
 <body>
     <div class="form-container">
-        <h1>Ajouter Utilisateur</h1>
+        <h1>Modifier Utilisateur</h1>
         <form action="#" method="POST">
             <div class="form-group">
                 <label for="nom">Nom <span>*</span> :</label>
@@ -110,13 +110,18 @@
                     <option value="admin">Admin</option>
                     <option value="user">Utilisateur</option>
                     <option value="guest">Directeur</option>
+                    <option value="stagiaire">Stagiaire</option>
+                    <option value="Directeur">Directeur</option>
+                    <option value="Responsable">Responsable</option>
+                   
                 </select>
             </div>
             <div class="form-group">
                 <label for="photo">Photo :</label>
                 <input type="file" id="photo" name="photo">
             </div>
-            <button type="submit">Ajouter</button>
+
+            <button type="submit"><a href="/gestionDeUtilisateurs/admin/utilisateur.html">Modifier</a></button>
         </form>
     </div>
 </body>
