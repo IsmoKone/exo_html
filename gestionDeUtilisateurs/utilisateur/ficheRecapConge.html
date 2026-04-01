@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attestation de Congé</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border: 2px solid #003366;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #003366;
+            padding-bottom: 20px;
+        }
+        .logo {
+            width: 100px;
+            height: 100px;
+        }
+        .title {
+            text-align: center;
+            flex: 1;
+        }
+        .title h1 {
+            margin: 0;
+            color: #003366;
+            font-size: 28px;
+        }
+        .title p {
+            margin: 5px 0 0 0;
+            color: #666;
+        }
+        .content {
+            line-height: 1.8;
+            margin: 30px 0;
+        }
+        .field {
+            margin: 20px 0;
+        }
+        .label {
+            font-weight: bold;
+            color: #003366;
+        }
+        .signature-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .signature-box {
+            text-align: center;
+            width: 150px;
+        }
+        .signature-line {
+            border-top: 1px solid #000;
+            margin-top: 40px;
+            padding-top: 10px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img width="40"  height="40" src="/gestionDeUtilisateurs/image/Logo-CEI 1.png" alt="Logo CEI" class="logo">
+            <div class="title">
+                <h1>ATTESTATION DE CONGÉ</h1>
+                <p>CEI - Ressources Humaines</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <p>Nous soussignés, représentants de la CEI, attestons par la présente que :</p>
+
+            <div class="field">
+                <span class="label">Nom et Prénom :</span> ___________________________________
+            </div>
+
+            <div class="field">
+                <span class="label">Matricule :</span> ___________________________________
+            </div>
+
+            <div class="field">
+                <span class="label">Fonction :</span> ___________________________________
+            </div>
+
+            <div class="field">
+                <span class="label">Période de congé :</span>
+                <p>Du _________________________________ au _________________________________</p>
+            </div>
+
+            <div class="field">
+                <span class="label">Type de congé :</span> ___________________________________
+            </div>
+
+            <div class="field">
+                <span class="label">Nombre de jours :</span> ___________________________________
+            </div>
+
+            <p style="margin-top: 30px; text-align: justify;">
+                Par la présente, nous confirmons que l'employé(e) ci-dessus nommé(e) est en congé autorisé pendant la période mentionnée. 
+                Cette attestation est fournie à titre informatif et certifie la régularité administrative du congé.
+            </p>
+
+            <div class="field">
+                <span class="label">Motif du congé :</span> ___________________________________
+            </div>
+        </div>
+
+        <div class="signature-section">
+            <div class="signature-box">
+                <p>Le Responsable RH</p>
+                <div class="signature-line"></div>
+            </div>
+            <div class="signature-box">
+                <p>Le Directeur</p>
+                <div class="signature-line"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Établi à _________________________ le _________________________</p>
+            <p>CEI © 2024 - Tous droits réservés</p>
+        </div>
+        <div>
+            <div style="text-align: center; margin-top: 30px; gap: 10px; display: flex; justify-content: center;">
+                <button style="padding: 10px 20px; background-color: #666; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;" onclick="history.back()">
+                    ← Retour
+                </button>
+                <button  style="padding: 10px 20px; background-color: #003366; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                    🖨️ Imprimer
+                </button>
+                <button  style="padding: 10px 20px; background-color: #003366; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                    ⬇️ Télécharger
+                </button>
+            </div>
+
+            <!-- <script>
+                function telecharger() {
+                    const element = document.querySelector('.container');
+                    const opt = {
+                        margin: 0,
+                        filename: 'attestation_conge.pdf',
+                        image: { type: 'jpeg', quality: 0.50},
+                        html2canvas: { scale: 2 },
+                        jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+                    };
+                    html2pdf().set(opt).from(element).save();
+                } -->
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+            
+        </div>
+    </div>
+</body>
+</html>

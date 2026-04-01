@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suppression d'Utilisateur</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .warning-icon {
+            font-size: 60px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .user-info {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .user-info p {
+            color: #34495e;
+            font-weight: 500;
+            margin: 8px 0;
+        }
+
+        .user-info strong {
+            color: #2c3e50;
+        }
+
+        .message {
+            color: #7f8c8d;
+            margin: 20px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .confirmation-text {
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-delete {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-cancel {
+            background-color: #95a5a6;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background-color: #7f8c8d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(149, 165, 166, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="warning-icon">⚠️</div>
+        <h1>Suppression d'Utilisateur</h1>
+        
+        <div class="user-info">
+            <p><strong>Nom:</strong> <span id="userName">Koné Issa</span></p>
+            <p><strong>Email:</strong> <span id="userEmail">koneissa@gmail.com</span></p>
+        </div>
+
+        <!-- <p class="message">
+            Vous êtes sur le point de supprimer cet utilisateur.
+        </p> -->
+
+        <p class="confirmation-text">Êtes-vous certain de vouloir continuer ?</p>
+
+        <div class="button-group">
+            <button class="btn-delete" onclick="confirmerSuppression()">Oui, Supprimer</button>
+            <button class="btn-cancel" onclick="annulerSuppression()">Annuler</button>
+        </div>
+    </div>
+
+    <script>
+        function confirmerSuppression() {
+            // Redirection vers la suppression réelle
+            alert('Utilisateur supprimé avec succès !');
+            window.location.href = '/gestionDeUtilisateurs/admin/utilisateur.html';
+        }
+
+        function annulerSuppression() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page utilisateurs</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+    }
+    
+    div {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    search {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    
+    input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    #modifier {
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    .bouton_recherche {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+
+    }
+    .bouton_recherche:hover {
+       modifier {
+        background-color: #007bff ;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+}
+
+    #supprimer {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    #details {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 15px;
+        /* background-color: #007bff; */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    button a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    
+    caption {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #007bff;
+        color: white;
+        padding: 12px;
+        text-align: left;
+        font-weight: bold;
+    }
+    
+    td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    tbody tr:hover {
+        background-color: #f9f9f9;
+    }
+</style>
+
+<body>
+    <div>
+        <!-- <h1>Gestion des utilisateurs</h1> -->
+        <div>
+            <search id="search">
+                <input type="text" placeholder="Rechercher un utilisateur..." required>
+                <button name="" class="bouton_recherche">Rechercher</button>
+            </search>
+        </div>
+          <table border="" width="100%" margin-left="40px" cellpadding="10" cellspacing="2">
+                <caption >La liste des utilisateurs</caption>
+                <thead>
+                    <tr>
+                        <th align="justify">ID</th>
+                        <th align="justify">NOM</th>
+                        <th align="justify">PRENOM</th>
+                        <th align="justify">EMAIL</th>
+                        <th align="justify">FONCTION</th>
+                        <th align="justify">TELEPHONE</th>
+                        <th align="justify">DIRECTION</th>
+                        <th >ACTIONS</th>
+                    </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td align="right">1</td>
+                        <td align="justify">KONE</td>
+                        <td align="justify">ISSA</td>
+                        <td align="justify">koneissa@gmail.com</td>
+                        <td align="justify">Stagiaire</td>
+                        <td>07 57 28 81 13</td>
+                        <td>Direction Informatique</td>
+
+                        <td>
+                           <button id="modifier"><a href="modifierUtilisateur.html">Modifier</a></button>
+                            <button id="supprimer"><a href="supprimerUtilisateur.html">Supprimer</a></button>
+                            <button id="details"><a href="/gestionDeUtilisateurs/utilisateur/detail.html">Détails</a></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">2</td>
+                        <td align="justify">DIALLO</td>
+                        <td align="justify">AMADOU</td>
+                        <td align="justify">dialloamadou@gmail.com</td>
+                        <td align="justify">Stagiaire</td>
+                        <td>07 57 28 81 14</td>
+                        <td>Direction Informatique</td>
+                        <td>
+                            <button id="modifier"><a href="/gestionDeUtilisateurs/admin/modifierUtilisateur.html">Modifier</a></button>
+                            <button id="supprimer"><a href="/gestionDeUtilisateurs/admin/supprimerUtilisateur.html">Supprimer</a></button>
+                            <button id="details"><a href="/gestionDeUtilisateurs/admin/detail.html">Détails</a></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+</body>
+
+</html>
